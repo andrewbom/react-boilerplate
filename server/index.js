@@ -38,7 +38,7 @@ mongoose.connection.on("error", (err) => {
 // --------------------------------- Route setup ---------------------------------
 
 app.get("/", (req, res) => {
-  res.send("hello world");
+  res.json({ hello: "hello world" });
 });
 
 app.get("/api/user/auth", auth, (req, res) => {
